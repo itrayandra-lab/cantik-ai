@@ -48,33 +48,17 @@
             </li>
 
             <li class="menu-header">Master Data</li>
-            <li {{ $sb == 'Category' ? 'class=active' : '' }}>
-                <a class="nav-link" href="{{ url('admin/manage-master/categories') }}">
-                    <i class="fas fa-tags"></i> <span>Merk / Kategori</span>
-                </a>
-            </li>
-            <li {{ $sb == 'Voucher' ? 'class=active' : '' }}>
-                <a class="nav-link" href="{{ url('admin/manage-master/voucher') }}">
-                    <i class="fas fa-ticket-alt"></i> <span>Voucher / Diskon</span>
-                </a>
-            </li>
-            <li {{ $sb == 'Product' ? 'class=active' : '' }}>
-                <a class="nav-link" href="{{ url('admin/manage-master/products') }}">
-                    <i class="fas fa-box"></i> <span>Produk</span>
-                </a>
-            </li>
             <li {{ $sb == 'User' ? 'class=active' : '' }}>
                 <a class="nav-link" href="{{ url('admin/manage-master/users') }}">
                     <i class="fas fa-users"></i> <span>User</span>
                 </a>
             </li>
-
-            <li class="menu-header">Transaksi</li>
-            <li {{ $sb == 'Transaction' ? 'class=active' : '' }}>
-                <a class="nav-link" href="{{ url('admin/transactions') }}">
-                    <i class="fas fa-cash-register"></i> <span>Transaksi</span>
+            <li {{ $sb == 'Category' ? 'class=active' : '' }}>
+                <a class="nav-link" href="{{ url('admin/manage-master/categories') }}">
+                    <i class="fas fa-tags"></i> <span>Merk / Kategori</span>
                 </a>
             </li>
+            
         </ul>
         <div class="hide-sidebar-mini mt-4 mb-4 p-3">
             <a href="/"

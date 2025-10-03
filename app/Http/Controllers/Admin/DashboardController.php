@@ -19,10 +19,6 @@ class DashboardController extends Controller
         $data = [
             'today'            => Carbon::createFromFormat('Y-m-d', date('Y-m-d'))->isoFormat('dddd, D MMMM Y'),
             'userCount'        => User::count(),
-            'productCount'     => Product::count(),
-            'transactionToday' => Transaction::whereDate('created_at', $today)->count(),
-            'incomeToday'      => Transaction::whereDate('created_at', $today)->sum('total_amount'),
-            'latestProducts'   => Product::latest()->take(5)->get(),
         ];
 
         return view('admin.dashboard.index', $data)->with('sb', 'Dashboard');

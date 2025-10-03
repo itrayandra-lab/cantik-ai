@@ -49,18 +49,6 @@
                     <i class="fas fa-tags"></i> <span>Merk / Kategori</span>
                 </a>
             </li>
-            <li {{ $sb == 'Product' ? 'class=active' : '' }}>
-                <a class="nav-link" href="{{ url('sales/manage-master/products') }}">
-                    <i class="fas fa-box"></i> <span>Produk</span>
-                </a>
-            </li>
-
-            <li class="menu-header">Transaksi</li>
-            <li {{ $sb == 'Transaction' ? 'class=active' : '' }}>
-                <a class="nav-link" href="{{ url('sales/transactions') }}">
-                    <i class="fas fa-cash-register"></i> <span>Transaksi</span>
-                </a>
-            </li>
         </ul>
         <div class="hide-sidebar-mini mt-4 mb-4 p-3">
             <a href="/"

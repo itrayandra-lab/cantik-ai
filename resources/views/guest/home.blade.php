@@ -3,138 +3,21 @@
 @section('title', 'Beranda')
 
 @section('content')
-    <div class="relative">
-
-        <main class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
-            @include('guest.components.header')
-
-            <section aria-labelledby="products-heading" class="pt-6 pb-24">
-                <h2 id="products-heading" class="sr-only">Produk</h2>
-                <div class="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4 lg:items-start">
-                     @include('guest.components.sidebar_categories')
-                    <div class="lg:col-span-3">
-                        @if($products->count() > 0)
-                        <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
-                            @foreach($products as $product)
-                            <div class="group relative flex flex-col overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                                <a href="{{ route('product.show', $product->slug) }}" class="aspect-h-4 aspect-w-3 bg-gray-200 sm:aspect-none sm:h-80">
-                                    <img src="{{ $product->photos->first() ? asset($product->photos->first()->foto) : asset('assets/img/human.png') }}" alt="{{ $product->name }}" class="h-full w-full object-cover object-center transition-transform duration-500 group-hover:scale-105 sm:h-full sm:w-full" />
-                                </a>
-                                <div class="flex flex-1 flex-col space-y-2 p-4">
-                                    <div class="flex-1">
-                                        <h3 class="text-sm font-medium text-gray-900">
-                                            <a href="{{ route('product.show', $product->slug) }}">
-                                                {{ $product->name }}
-                                            </a>
-                                        </h3>
-                                        <p class="mt-1 text-xs text-gray-500">
-                                            <span class="inline-block bg-indigo-100 text-indigo-800 rounded-full px-2 py-0.5 font-semibold">
-                                                {{ $product->category->name }}
-                                            </span>
-                                        </p>
-                                    </div>
-                                    <div class="flex items-center justify-between">
-                                        <p class="text-xl font-bold text-gray-900">
-                                            Rp. {{ number_format($product->price) }}
-                                        </p>
-                                        <button type="button"
-                                            class="rounded-full  transition add-to-cart"
-                                            data-id="{{ $product->id }}">
-                                            <i class="fa-solid fa-cart-plus"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            @endforeach
-                        </div>
-                        @else
-                        <div class="flex flex-col items-center justify-center rounded-lg border-2 border-dashed border-gray-300 bg-white/80 py-24 text-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="mx-auto h-12 w-12 text-gray-400">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
-                            </svg>
-                            <h3 class="mt-2 text-xl font-semibold text-gray-900">Produk tidak ditemukan</h3>
-                            <p class="mt-1 text-sm text-gray-500">Kami tidak dapat menemukan produk yang cocok dengan pencarian atau filter Anda.</p>
-                            <div class="mt-6">
-                                <a href="{{ route('home') }}" class="inline-flex items-center rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
-                                    Hapus semua filter
-                                </a>
-                            </div>
-                        </div>
-                        @endif
-
-                        <div class="mt-10 ml-auto text-center flex justify-center">
-                            @if ($products->hasPages())
-                                <nav aria-label="Pagination" class="flex items-center justify-between">
-                                    <div class="flex items-center space-x-2">
-                                        <!-- Previous Button -->
-                                        <a href="{{ $products->previousPageUrl() }}" 
-                                        class="inline-flex items-center rounded-md border border-gray-300 bg-white px-3 py-2 text-sm font-medium text-gray-700 {{ $products->onFirstPage() ? 'cursor-not-allowed opacity-50' : 'hover:bg-gray-50' }}"
-                                        {{ $products->onFirstPage() ? 'aria-disabled="true"' : '' }}>
-                                            <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                                            </svg>
-                                        </a>
-
-                                        <div class="flex space-x-1">
-                                            @php
-                                                $currentPage = $products->currentPage();
-                                                $lastPage = $products->lastPage();
-                                                $range = 2; 
-                                                $start = max(1, $currentPage - $range);
-                                                $end = min($lastPage, $currentPage + $range);
-                                            @endphp
-
-                                            <!-- First Page -->
-                                            @if ($start > 1)
-                                                <a href="{{ $products->url(1) }}"
-                                                class="inline-flex items-center rounded-md border border-gray-300 px-4 py-2 text-sm font-medium bg-white text-gray-700 hover:bg-gray-50"
-                                                aria-current="{{ $products->currentPage() == 1 ? 'page' : '' }}">
-                                                    1
-                                                </a>
-                                                @if ($start > 2)
-                                                    <span class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700">...</span>
-                                                @endif
-                                            @endif
-
-                                            <!-- Page Range -->
-                                            @for ($page = $start; $page <= $end; $page++)
-                                                <a href="{{ $products->url($page) }}"
-                                                class="inline-flex items-center rounded-md border border-gray-300 px-4 py-2 text-sm font-medium {{ $products->currentPage() == $page ? 'bg-indigo-600 text-white' : 'bg-white text-gray-700 hover:bg-gray-50' }}"
-                                                aria-current="{{ $products->currentPage() == $page ? 'page' : '' }}">
-                                                    {{ $page }}
-                                                </a>
-                                            @endfor
-
-                                            <!-- Last Page -->
-                                            @if ($end < $lastPage)
-                                                @if ($end < $lastPage - 1)
-                                                    <span class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700">...</span>
-                                                @endif
-                                                <a href="{{ $products->url($lastPage) }}"
-                                                class="inline-flex items-center rounded-md border border-gray-300 px-4 py-2 text-sm font-medium bg-white text-gray-700 hover:bg-gray-50"
-                                                aria-current="{{ $products->currentPage() == $lastPage ? 'page' : '' }}">
-                                                    {{ $lastPage }}
-                                                </a>
-                                            @endif
-                                        </div>
-
-                                        <!-- Next Button -->
-                                        <a href="{{ $products->nextPageUrl() }}"
-                                        class="inline-flex items-center rounded-md border border-gray-300 bg-white px-3 py-2 text-sm font-medium text-gray-700 {{ $products->hasMorePages() ? 'hover:bg-gray-50' : 'cursor-not-allowed opacity-50' }}"
-                                        {{ $products->hasMorePages() ? '' : 'aria-disabled="true"' }}>
-                                            <svg class=" h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                                            </svg>
-                                        </a>
-                                    </div>
-                                </nav>
-                            @endif
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-    </div>
+        @include('guest.components.hero')
+        @include('guest.components.features-1')  
+        @include('guest.components.video-section')
+        @include('guest.components.features-2')  
+        @include('guest.components.banner')  
+        <div class="inline-flex items-center justify-center w-full bg-indigo-700">
+          <hr class="w-64 h-1 my-8 bg-gray-200 border-0 rounded-sm ">
+          <div class="absolute px-4 -translate-x-1/2 bg-indigo-700 left-1/2 ">
+            <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 14">
+                <path d="M6 0H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3H2a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Zm10 0h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4v1a3 3 0 0 1-3 3h-1a1 1 0 0 0 0 2h1a5.006 5.006 0 0 0 5-5V2a2 2 0 0 0-2-2Z"/>
+            </svg>
+          </div>
+        </div>
+        @include('guest.components.example-chat')  
+        
 @endsection
 
 @push('scripts')

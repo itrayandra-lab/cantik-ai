@@ -17,17 +17,18 @@
         
         <div class="relative z-10">
           <p class="text-sm font-semibold text-blue-200 uppercase tracking-wider">
-            Watch Our Video
+            Tonton Video Kami
           </p>
           <h1 class="mt-4 text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
-            Dream in the Glow of Beauty
+            Rasakan Kilau Kecantikan Anda
           </h1>
           <p class="mt-6 text-base text-blue-100 max-w-lg">
-            Our Skincare Line isn’t just about care, it’s about awakening. Like the sun greeting the day, our products reveal the radiant glow inherent in your skin.
+            Rangkaian perawatan kulit kami bukan sekadar merawat, tetapi membangkitkan. 
+            Seperti mentari yang menyapa pagi, produk kami membantu menyingkap kilau alami yang tersembunyi di kulit Anda.
           </p>
           <div class="mt-8">
             <a href="#product" class="inline-block px-8 py-3 border border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-700 transition-colors duration-300">
-              Know More
+              Selengkapnya
             </a>
           </div>
         </div>
@@ -35,7 +36,7 @@
 
       <!-- Kanan -->
       <div class="relative h-64 sm:h-80 lg:h-auto">
-        <img class="w-full h-full object-cover" src="{{ asset('assets/img/banner-3.jpg') }}" alt="Modern architecture">
+        <img class="w-full h-full object-cover" src="{{ asset('assets/img/banner-3.jpg') }}" alt="Keindahan modern">
         <div class="absolute inset-0 bg-black/20 flex items-center justify-center">
           <button onclick="playVideo()" class="group relative w-20 h-20 lg:w-24 lg:h-24 flex items-center justify-center">
             <div class="absolute inset-0 bg-white/30 rounded-full animate-ping group-hover:animate-none"></div>
@@ -51,7 +52,7 @@
         <div id="video-container" class="absolute inset-0 hidden">
           <iframe class="w-full h-full"
             src="https://www.youtube.com/embed/yjmYxEt0MoE?autoplay=1"
-            title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+            title="Pemutar video YouTube" frameborder="0" allowfullscreen></iframe>
         </div>
       </div>
 

@@ -14,14 +14,14 @@
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="mb-14 text-center" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
             <h2 class="text-4xl text-center font-bold text-gray-900 leading-[3.25rem] mb-6  ">
-                What is Cantik.ai ?
+                Apa Si Cantik.ai ?
             </h2>
             <p class="text-base font-normal text-gray-500 lg:max-w-2xl lg:mx-auto mb-8">
-                Cantik.ai is an AI-powered SaaS platform that partners with beauty brands to transform skincare science into highly personalized digital experiences that drive growth.
+                Cantik.ai adalah platform SaaS bertenaga AI yang bermitra dengan merek kecantikan untuk mengubah ilmu perawatan kulit menjadi pengalaman digital yang sangat personal yang mendorong pertumbuhan.
             </p>
             <div class="flex flex-col justify-center md:flex-row gap-5 max-w-lg mx-auto md:max-w-2xl lg:max-w-full">
                 <a href="#product" class="cursor-pointer bg-indigo-50 py-3 px-6 rounded-full flex items-center justify-center text-sm font-semibold text-indigo-600 transition-all duration-500 focus:outline-none hover:bg-indigo-100">
-                    Learn More
+                    Pelajari Lebih Lanjut
                 </a>
             </div>
         </div>
@@ -41,14 +41,14 @@
                     <!-- Bagian Teks -->
                     <div class="p-5 xl:p-8 w-full md:w-1/2 order-2 md:order-1">
                         <h3 class="text-lg font-bold xl:text-xl text-white py-5 w-full xl:w-64">
-                            Ask our AI about your skin concerns for personalized solutions.
+                            Tanyakan pada AI kami untuk solusi kulit yang personal.
                         </h3>
                         <p class="text-xs font-normal text-gray-300 w-full mb-8 xl:w-64">
-                            Receive tailored skincare recommendations in minutes using our advanced AI technology, no appointments needed.
+                            Temukan solusi perawatan kulit terbaik untuk Anda dalam hitungan menit—cukup dengan AI kami, tanpa harus datang ke klinik.
                         </p>
                         <button onclick="document.getElementById('chat-ai').scrollIntoView({behavior:'smooth'});"  
                             class="py-2 px-5 border border-solid border-gray-300 rounded-full gap-2 text-xs text-white font-semibold flex items-center justify-between transition-all duration-500 hover:bg-white/5">
-                            View More
+                            Selengkapnya
                             <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1 9L3.58579 6.41421C4.25245 5.74755 4.58579 5.41421 4.58579 5C4.58579 4.58579 4.25245 4.25245 3.58579 3.58579L1 1" 
                                     stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -63,10 +63,10 @@
             <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" class="relative w-full h-auto">
                 <div class="bg-indigo-500 rounded-2xl p-5 xl:p-8 h-full">
                     <h3 class="py-5 text-white text-lg font-bold xl:text-xl">
-                        Advanced AI for superior skincare results
+                        AI canggih untuk hasil perawatan kulit yang superior.
                     </h3>
                     <p class="text-xs font-normal text-white mb-8">
-                        Our cutting-edge AI technology delivers personalized cosmetic solutions for Lunaray Beauty Factory products.
+                        Teknologi AI mutakhir kami menghadirkan solusi kosmetik yang dipersonalisasi untuk produk Lunaray Beauty Factory.
                     </p>
                 </div>
             </div>
@@ -74,10 +74,10 @@
                 <div class="bg-violet-500 rounded-2xl p-5 xl:p-8 h-full">
                     
                     <h3 class="py-5 text-white text-lg font-bold xl:text-xl">
-                        Build your beauty routine with AI insights
+                        Bangun rutinitas kecantikan dengan AI.
                     </h3>
                     <p class="text-xs font-normal text-white mb-8">
-                        Every Lunaray Beauty Factory product is enhanced with AI-driven insights to optimize your skincare routine.
+                        Setiap produk Lunaray Beauty Factory ditingkatkan dengan wawasan berbasis AI untuk mengoptimalkan rutinitas perawatan kulit Anda.
                     </p>
                    
                 </div>

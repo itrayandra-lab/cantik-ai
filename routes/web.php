@@ -7,7 +7,7 @@ use App\Http\Controllers\GuestController;
 # Admin Controllers
 use App\Http\Controllers\Admin\DashboardController as DashboardAdmin;
 use App\Http\Controllers\Admin\ManageMaster\UserController as UserAdmin;
-use App\Http\Controllers\Admin\ManageMaster\CategoryController as CategoryAdmin;
+use App\Http\Controllers\Admin\ManageMaster\DatasetController as DatasetAdmin;
 # Sales Controllers
 use App\Http\Controllers\Sales\DashboardController as DashboardSales;
 use App\Http\Controllers\Sales\ManageMaster\CategoryController as CategorySales;
@@ -42,13 +42,11 @@ Route::prefix('admin')->middleware(['auth', 'role:admin'])->group(function () {
             Route::post('update', [UserAdmin::class, 'update']);
             Route::delete('/', [UserAdmin::class, 'delete']);
         });
-        Route::prefix('categories')->group(function () {
-            Route::get('/', [CategoryAdmin::class, 'index']);
-            Route::post('/', [CategoryAdmin::class, 'create']);
-            Route::get('all', [CategoryAdmin::class, 'getall']);
-            Route::post('get', [CategoryAdmin::class, 'get']);
-            Route::post('update', [CategoryAdmin::class, 'update']);
-            Route::delete('/', [CategoryAdmin::class, 'delete']);
+        Route::prefix('dataset')->group(function () {
+            Route::get('/', [DatasetAdmin::class, 'index']);
+            Route::post('/', [DatasetAdmin::class, 'create']);
+            Route::get('all', [DatasetAdmin::class, 'getall']);
+            Route::delete('/', [DatasetAdmin::class, 'delete']);
         });
     });
 

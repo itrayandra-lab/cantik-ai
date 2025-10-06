@@ -53,9 +53,9 @@
                     <i class="fas fa-users"></i> <span>User</span>
                 </a>
             </li>
-            <li {{ $sb == 'Category' ? 'class=active' : '' }}>
-                <a class="nav-link" href="{{ url('admin/manage-master/categories') }}">
-                    <i class="fas fa-tags"></i> <span>Merk / Kategori</span>
+            <li {{ $sb == 'Dataset' ? 'class=active' : '' }}>
+                <a class="nav-link" href="{{ url('admin/manage-master/dataset') }}">
+                    <i class="fas fa-tags"></i> <span>Dataset</span>
                 </a>
             </li>
             

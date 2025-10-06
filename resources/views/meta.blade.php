@@ -15,18 +15,18 @@
 
 <meta property="og:title" content="Powering personalized skincare experiences with AI skin analysis solutions">
 <meta property="og:description" content="IPOS adalah sistem Point of Sale dari PT Lunaray Cahya yang membantu bisnis mengelola penjualan, stok, dan laporan dengan mudah.">
-<meta property="og:image" content="{{ asset('assets/img/logo.png') }}">
+<meta property="og:image" content="{{ asset('assets/img/cantikai.png') }}">
 <meta property="og:url" content="{{ request()->fullUrl() }}">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Powering personalized skincare experiences with AI skin analysis solutions">
 <meta name="twitter:description" content="Powering personalized skincare experiences with AI skin analysis solutions">
-<meta name="twitter:image" content="{{ asset('assets/img/logo.png') }}">
+<meta name="twitter:image" content="{{ asset('assets/img/cantikai.png') }}">
 
 <title>CANTIK.AI | PT Lunaray Cahya</title>
 
-<link rel="icon" href="{{ asset('assets/img/logo.png') }}">
-<link rel="apple-touch-icon" href="{{ asset('assets/img/logo.png') }}">
-<link rel="apple-touch-icon" sizes="152x152" href="{{ asset('assets/img/logo.png') }}">
-<link rel="apple-touch-icon" sizes="167x167" href="{{ asset('assets/img/logo.png') }}">
-<link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/img/logo.png') }}">
+<link rel="icon" href="{{ asset('assets/img/cantikai.png') }}">
+<link rel="apple-touch-icon" href="{{ asset('assets/img/cantikai.png') }}">
+<link rel="apple-touch-icon" sizes="152x152" href="{{ asset('assets/img/cantikai.png') }}">
+<link rel="apple-touch-icon" sizes="167x167" href="{{ asset('assets/img/cantikai.png') }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/img/cantikai.png') }}">

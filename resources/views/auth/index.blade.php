@@ -7,7 +7,7 @@
                 <div class="p-4 m-3">
                     <img src="{{ asset('assets/img/logo.png') }}" alt="logo" width="100"
                         class="mb-5 mt-2 rounded">
-                    <h4 class="text-dark font-weight-normal">Selamat Datang di <span class="font-weight-bold">IPOS</span></h4>
+                    <h4 class="text-dark font-weight-normal">Selamat Datang di <span class="font-weight-bold">Cantik.Ai</span></h4>
                     <p class="text-muted">Silakan login dengan akun Anda untuk melanjutkan.</p>
                     @error('message')
                         <div class="alert alert-danger alert-dismissible fade show" role="alert">

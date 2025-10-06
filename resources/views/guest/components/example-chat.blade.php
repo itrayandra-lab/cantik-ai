@@ -1,36 +1,39 @@
 <section id="ai-companion" class="pb-16 bg-indigo-700 text-white">
     <div class="container mx-auto px-4">
         <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold mb-4">AI Skincare Companion: Skin.Chat</h2>
-            <p class="max-w-2xl mx-auto">The always-on AI chat solution designed for skincare brands to deliver trusted, personalized guidance and seamless shopping, adaptable to your brand’s unique voice.</p>
+            <h2 class="text-3xl font-bold mb-4">Pendamping Skincare AI: <span class="text-yellow-300">Skin.Chat</span></h2>
+            <p class="max-w-2xl mx-auto">
+                Solusi chat AI yang selalu aktif, dirancang untuk brand skincare agar dapat memberikan panduan terpercaya dan personal, serta pengalaman belanja yang mulus — sepenuhnya dapat disesuaikan dengan gaya dan karakter merek Anda.
+            </p>
         </div>
         
         <div class="max-w-4xl mx-auto bg-white/10 backdrop-blur-sm rounded-xl overflow-hidden">
             <div class="grid grid-cols-1 md:grid-cols-5">
+                
+                <!-- Fitur Kiri -->
                 <div class="md:col-span-2 p-8 border-r border-white/20">
-                    <h3 class="text-xl font-bold mb-4">Key Features of Skin.Chat</h3>
+                    <h3 class="text-xl font-bold mb-4">Fitur Unggulan Skin.Chat</h3>
                     <ul class="space-y-3">
                         <li class="flex items-start">
                             <i class="fas fa-check-circle mt-1 mr-3 text-yellow-300"></i>
-                            <span>Personalized Routine Builder: Adapts recommendations based on user skin type, concerns, and goals.</span>
+                            <span>Pembangun Rutinitas Pribadi: Memberikan rekomendasi yang disesuaikan dengan jenis kulit, permasalahan, dan tujuan pengguna.</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-check-circle mt-1 mr-3 text-yellow-300"></i>
-                            <span>Seamless Shopping Integration: Adds products to cart directly from the conversation.</span>
+                            <span>Integrasi Belanja yang Lancar: Produk dapat langsung ditambahkan ke keranjang dari percakapan.</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-check-circle mt-1 mr-3 text-yellow-300"></i>
-                            <span>Brand Tone & Style Adaptation: AI communicates using your brand's specific voice and guidelines.</span>
+                            <span>Adaptasi Gaya Komunikasi Merek: AI berbicara dengan gaya bahasa dan nada khas merek Anda.</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-check-circle mt-1 mr-3 text-yellow-300"></i>
-                            <span>Ingredient and Benefit Explainer: Provides on-demand, trusted product knowledge.</span>
+                            <span>Penjelasan Kandungan & Manfaat: Memberikan informasi terpercaya tentang bahan dan fungsi produk secara instan.</span>
                         </li>
                     </ul>
-                    
-                   
                 </div>
                 
+                <!-- Tampilan Chat Kanan -->
                 <div class="md:col-span-3 bg-white/5 p-6">
                     <div class="bg-gray-800 rounded-lg p-4 h-full">
                         <div class="flex items-center mb-4">
@@ -38,32 +41,32 @@
                                 alt="Skin.Chat Icon" class="w-10 h-10 rounded-full bg-pink-600 p-2">
                             <div class="ml-3">
                                 <h3 class="font-bold">Skin.Chat AI</h3>
-                                <p class="text-xs opacity-70">Always-On Skincare Expert</p>
+                                <p class="text-xs opacity-70">Ahli Skincare 24/7</p>
                             </div>
                         </div>
                         
                         <div class="space-y-3 mb-4 h-80 overflow-y-auto">
                             <div class="chatbot-message bg-gray-700 rounded-lg p-3 rounded-bl-none max-w-xs">
-                                <p>Welcome! I'm here to help you build your perfect skincare routine. Tell me, what's your skin type and main concern today?</p>
+                                <p>Halo! Aku di sini untuk membantu kamu membangun rutinitas skincare yang sempurna. Boleh tahu, apa jenis kulit dan masalah utama kulitmu saat ini?</p>
                             </div>
                             
                             <div class="chatbot-message flex justify-end">
                                 <div class="bg-pink-600 rounded-lg p-3 rounded-br-none max-w-xs">
-                                    <p>Hi Skin.Chat! I have oily skin and I'm looking for a product to help with breakouts.</p>
+                                    <p>Hai Skin.Chat! Kulitku berminyak dan sering berjerawat. Ada rekomendasi produk yang bisa bantu?</p>
                                 </div>
                             </div>
                             
                             <div class="chatbot-message bg-gray-700 rounded-lg p-3 rounded-bl-none max-w-xs">
-                                <p>I see! For oily, breakout-prone skin, I highly recommend our Clarifying Salicylic Acid Cleanser. It gently exfoliates and controls oil without stripping your skin. Would you like me to add it to your cart, or tell you more about Salicylic Acid?</p>
+                                <p>Baik! Untuk kulit berminyak dan mudah berjerawat, aku sarankan <strong>Clarifying Salicylic Acid Cleanser</strong>. Pembersih ini membantu eksfoliasi lembut dan mengontrol minyak tanpa membuat kulit kering. Ingin aku tambahkan ke keranjang, atau kamu mau tahu lebih lanjut tentang Salicylic Acid?</p>
                                 <div class="mt-2 flex space-x-2">
-                                    <button class="text-xs bg-gray-600 px-2 py-1 rounded">Explain Salicylic Acid</button>
-                                    <button class="text-xs bg-gray-600 px-2 py-1 rounded">Show More Cleansers</button>
+                                    <button class="text-xs bg-gray-600 px-2 py-1 rounded">Jelaskan Salicylic Acid</button>
+                                    <button class="text-xs bg-gray-600 px-2 py-1 rounded">Lihat Pembersih Lain</button>
                                 </div>
                             </div>
                         </div>
                         
                         <div class="flex border-t border-gray-700 pt-3">
-                            <input type="text" placeholder="Type your skincare question..." class="flex-1 bg-gray-700 border-none rounded-full px-4 py-2 placeholder-gray-400 text-white">
+                            <input type="text" placeholder="Ketik pertanyaan skincare kamu..." class="flex-1 bg-gray-700 border-none rounded-full px-4 py-2 placeholder-gray-400 text-white">
                             <button class="ml-2 bg-yellow-300 text-pink-600 hidden lg:inline w-10 h-10 rounded-full flex items-center justify-center">
                                 <i class="fas fa-paper-plane"></i>
                             </button>

@@ -1,7 +1,7 @@
 <section id="ai-companion" class="pb-16 bg-indigo-700 text-white">
     <div class="container mx-auto px-4">
         <div class="text-center mb-12">
-            <h2 class="text-3xl font-bold mb-4">Pendamping Skincare AI: <span class="text-yellow-300">Skin.Chat</span></h2>
+            <h2 class="text-3xl font-bold mb-4">Asisten Skincare AI: <span class="text-yellow-300">Skin.Chat</span></h2>
             <p class="max-w-2xl mx-auto">
                 Solusi chat AI yang selalu aktif, dirancang untuk brand skincare agar dapat memberikan panduan terpercaya dan personal, serta pengalaman belanja yang mulus — sepenuhnya dapat disesuaikan dengan gaya dan karakter merek Anda.
             </p>

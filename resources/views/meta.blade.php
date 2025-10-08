@@ -10,11 +10,11 @@
 
 <meta name="description" content="Powering personalized skincare experiences with AI skin analysis solutions.">
 <meta name="keywords" content="Powering personalized skincare experiences with AI skin analysis solutions">
-<meta name="author" content="PT Lunaray Cahya">
+<meta name="author" content="Raycorp">
 <meta name="robots" content="index, follow">
 
 <meta property="og:title" content="Powering personalized skincare experiences with AI skin analysis solutions">
-<meta property="og:description" content="IPOS adalah sistem Point of Sale dari PT Lunaray Cahya yang membantu bisnis mengelola penjualan, stok, dan laporan dengan mudah.">
+<meta property="og:description" content="Powering personalized skincare experiences with AI skin analysis solutions.">
 <meta property="og:image" content="{{ asset('assets/img/cantikai.png') }}">
 <meta property="og:url" content="{{ request()->fullUrl() }}">
 
@@ -23,7 +23,7 @@
 <meta name="twitter:description" content="Powering personalized skincare experiences with AI skin analysis solutions">
 <meta name="twitter:image" content="{{ asset('assets/img/cantikai.png') }}">
 
-<title>CANTIK.AI | PT Lunaray Cahya</title>
+<title>CANTIK.AI</title>
 
 <link rel="icon" href="{{ asset('assets/img/cantikai.png') }}">
 <link rel="apple-touch-icon" href="{{ asset('assets/img/cantikai.png') }}">

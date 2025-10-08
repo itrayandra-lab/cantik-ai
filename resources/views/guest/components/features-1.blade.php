@@ -14,10 +14,10 @@
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="mb-14 text-center" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
             <h2 class="text-4xl text-center font-bold text-gray-900 leading-[3.25rem] mb-6  ">
-                Apa Si Cantik.ai ?
+                Apa itu Cantik.ai?
             </h2>
             <p class="text-base font-normal text-gray-500 lg:max-w-2xl lg:mx-auto mb-8">
-                Cantik.ai adalah platform SaaS bertenaga AI yang bermitra dengan merek kecantikan untuk mengubah ilmu perawatan kulit menjadi pengalaman digital yang sangat personal yang mendorong pertumbuhan.
+                Cantik.ai adalah platform SaaS berbasis AI yang berkolaborasi dengan merek kecantikan untuk mengubah ilmu perawatan kulit menjadi pengalaman digital yang personal, cerdas, dan mendorong pertumbuhan bisnis secara berkelanjutan.
             </p>
             <div class="flex flex-col justify-center md:flex-row gap-5 max-w-lg mx-auto md:max-w-2xl lg:max-w-full">
                 <a href="#product" class="cursor-pointer bg-indigo-50 py-3 px-6 rounded-full flex items-center justify-center text-sm font-semibold text-indigo-600 transition-all duration-500 focus:outline-none hover:bg-indigo-100">

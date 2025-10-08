@@ -6,8 +6,8 @@
     
     <!-- AI Skin Analysis -->
     <div class="relative" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-        <div class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:px-8">
-            <div class="mx-auto max-w-xl px-6 lg:mx-0 lg:max-w-none lg:py-16 lg:px-0">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 2xl:px-16 2xl:max-w-none lg:grid lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24">
+            <div class="mx-auto max-w-xl px-6 lg:mx-0 lg:max-w-none lg:py-16 lg:px-0 2xl:pl-8">
                 <div>
                     <div>
                         <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-500">
@@ -38,7 +38,7 @@
                     </div>
                 </div>
             </div>
-            <div class="mt-12 sm:mt-16 lg:mt-0">
+            <div class="mt-12 sm:mt-16 lg:mt-0 2xl:pr-8">
                 <div class="-mr-48 pl-6 md:-mr-16 lg:relative lg:m-0 lg:h-full lg:px-0">
                     <img loading="lazy" width="647" height="486"
                         data-aos="fade-down"
@@ -53,8 +53,8 @@
 
     <!-- Skin.Chat -->
     <div class="relative" data-aos="fade-up" data-aos-anchor-placement="top-bottom" id="chat-ai">
-        <div class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:px-8">
-            <div class="mx-auto max-w-xl px-6 lg:mx-0 lg:max-w-none lg:py-16 lg:px-0 lg:col-start-2">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 2xl:px-16 2xl:max-w-none lg:grid lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24">
+            <div class="mx-auto max-w-xl px-6 lg:mx-0 lg:max-w-none lg:py-16 lg:px-0 lg:col-start-2 2xl:pr-8">
                 <div>
                     <div>
                         <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-500">
@@ -85,7 +85,7 @@
                     </div>
                 </div>
             </div>
-            <div class="mt-12 sm:mt-16 lg:mt-0">
+            <div class="mt-12 sm:mt-16 lg:mt-0 2xl:pl-8">
                 <div class="-ml-48 pr-6 md:-ml-16 lg:relative lg:m-0 lg:h-full lg:px-0">
                     <img alt="Antarmuka Skin.Chat" loading="lazy" width="647" height="486"
                         data-aos="fade-down"
@@ -100,8 +100,8 @@
 
     <!-- SkinGPT -->
     <div class="relative" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-        <div class="lg:mx-auto lg:grid lg:max-w-7xl lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24 lg:px-8">
-            <div class="mx-auto max-w-xl px-6 lg:mx-0 lg:max-w-none lg:py-16 lg:px-0">
+        <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 2xl:px-16 2xl:max-w-none lg:grid lg:grid-flow-col-dense lg:grid-cols-2 lg:gap-24">
+            <div class="mx-auto max-w-xl px-6 lg:mx-0 lg:max-w-none lg:py-16 lg:px-0 2xl:pl-8">
                 <div>
                     <div>
                         <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-500">
@@ -132,7 +132,7 @@
                     </div>
                 </div>
             </div>
-            <div class="mt-12 sm:mt-16 lg:mt-0">
+            <div class="mt-12 sm:mt-16 lg:mt-0 2xl:pr-8">
                 <div class="-mr-48 pl-6 md:-mr-16 lg:relative lg:m-0 lg:h-full lg:px-0">
                     <img loading="lazy" width="646" height="485"
                         data-aos="fade-down"

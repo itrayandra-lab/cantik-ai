@@ -1,8 +1,8 @@
-<div class="relative  bg-gray-50 overflow-hidden">
+<div class="relative bg-gray-50 overflow-hidden">
   <div class="absolute inset-y-0 right-0 w-3/5 lg:w-2/5 xl:w-1/2 bg-purple-100 rounded-l-full transform translate-x-1/4 translate-y-1/8 rotate-6 scale-105 opacity-70 z-0"></div>
   <div class="absolute top-1/2 right-0 w-2/5 lg:w-1/4 xl:w-1/3 h-1/2 bg-purple-200 rounded-l-full transform translate-x-1/3 -translate-y-1/2 rotate-12 scale-110 opacity-60 z-0"></div>
   <nav class="absolute top-0 left-0 right-0 z-20">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 2xl:px-24 2xl:max-w-none">
         <div class="flex items-center justify-between py-4 sm:py-6">
           <div class="flex items-center">
             <img class="h-10 w-auto" style="margin: -25px 0 0 0;" src="{{ asset('assets/img/cantikai.png') }}" alt="Logo">
@@ -19,15 +19,15 @@
       </div>
   </nav>
 
-  <div class="relative max-w-7xl mx-auto z-10 pt-24 lg:pt-36 pb-10 px-4 sm:px-6 lg:px-8">
-    <div class="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center">
+  <div class="relative w-full max-w-7xl mx-auto z-10 pt-24 lg:pt-36 pb-10 px-4 sm:px-6 lg:px-8 2xl:px-16 2xl:max-w-none">
+    <div class="lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center w-full">
       
-      <div>
+      <div class="2xl:pl-8">
         <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl md:text-6xl">
           Kecantikan <span class="text-indigo-600">sejati</span> berawal dari analisis cerdas.
         </h1>
         <p class="mt-6 text-xl text-gray-600 max-w-xl">
-         Dengan dukungan solusi AI dan Gen AI berbasis SaaS, kami memungkinkan merek kecantikan memahami pelanggan secara lebih mendalam, menghadirkan pengalaman digital yang disesuaikan dengan preferensi unik setiap individu, serta mempercepat siklus inovasi produk dari riset hingga peluncuran, demi menciptakan hubungan yang lebih kuat antara merek dan konsumennya.
+         Dengan solusi AI dan Gen AI berbasis SaaS, kami membantu merek kecantikan memahami pelanggan lebih dalam, menghadirkan pengalaman digital personal, dan mempercepat inovasi produk dari riset hingga peluncuran.
         </p>
         <div class="mt-10">
           <a href="/coming-soon" class="px-8 py-4 border border-transparent text-base font-medium rounded-full text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
@@ -36,7 +36,7 @@
         </div>
       </div>
 
-      <div class="mt-12 relative lg:mt-0" >
+      <div class="mt-12 relative lg:mt-0 2xl:pr-8" >
         <div class="relative w-full max-w-md mx-auto">
             <img  
                 class="w-full rounded-lg mb-[-50px] lg:mb-[-120px]" 
@@ -58,7 +58,7 @@
                 <p class="text-xs sm:text-sm text-gray-500">Untuk kulit lebih cerah</p>
             </div>
             
-            <div class=" absolute bottom-4 right-1/2 translate-x-1/2 bg-white p-2 sm:p-3 rounded-full shadow-lg flex items-center space-x-2 whitespace-nowrap">
+            <div class=" absolute right-3/5  bg-white p-2 sm:p-3 rounded-full shadow-lg flex items-center space-x-2 whitespace-nowrap">
                 <div class="flex -space-x-2">
                     <img class="h-8 w-8 rounded-full ring-2 ring-white" src="{{ asset('assets/img/bot-2.gif') }}" alt="">
                 </div>

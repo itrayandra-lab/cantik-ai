@@ -5,7 +5,6 @@
 @section('content')
         @include('guest.components.hero')
         @include('guest.components.features-1')  
-        @include('guest.components.video-section')
         @include('guest.components.features-2')  
         @include('guest.components.banner')  
         <div class="inline-flex items-center justify-center w-full bg-indigo-700">

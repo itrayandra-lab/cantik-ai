@@ -38,7 +38,7 @@ class GuestController extends Controller
         }
 
         try {
-            $apiUrl = env('API_URL_CHATBOT') . '/chat?api_key='. env('API_KEY_CHATBOT ');
+            $apiUrl = env('API_URL_CHATBOT') . '/chat?api_key='. env('API_KEY_CHATBOT');
 
             $response = Http::timeout(15)->post($apiUrl, [
                 'query' => $query,

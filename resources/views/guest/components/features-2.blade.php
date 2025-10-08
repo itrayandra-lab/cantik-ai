@@ -68,7 +68,7 @@
                     </div>
                     <div class="mt-6">
                         <h2 class="text-3xl font-bold tracking-tight text-gray-900">
-                            Skin.Chat
+                            Skin Chat
                         </h2>
                         <p class="mt-4 text-lg text-gray-600">
                             Asisten AI yang berfokus pada perawatan kulit, dirancang untuk memberikan panduan terpercaya, 
@@ -78,8 +78,8 @@
                         </p>
                         <div class="mt-6">
                             <a class="inline-flex rounded-lg bg-indigo-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-indigo-600 hover:bg-indigo-700 hover:ring-indigo-700"
-                                href="/coming-soon">
-                                Pelajari Lebih Lanjut
+                                href="https://wa.me/6285134892552" target="blank">
+                                Cobain Sekarang
                             </a>
                         </div>
                     </div>

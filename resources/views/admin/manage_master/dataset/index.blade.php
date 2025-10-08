@@ -102,11 +102,11 @@
                     type: "GET"
                 },
                 columns: [
-                    { data: 'DT_RowIndex', name: 'DT_RowIndex', orderable: false },
+                    { data: 'DT_RowIndex', orderable: false, searchable: false },
                     { data: 'text', name: 'text' },
-                    { data: 'action', name: 'action', orderable: false }
+                    { data: 'action', orderable: false, searchable: false }
                 ],
-                order: [[1, 'asc']]
+                order: [[1, 'desc']]
             });
 
             // Upload Excel handler

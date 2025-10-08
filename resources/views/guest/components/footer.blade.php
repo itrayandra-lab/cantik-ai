@@ -20,7 +20,7 @@
                             <a href="/coming-soon" class="hover:underline">SkinGPT</a>
                         </li>
                         <li class="mb-4">
-                            <a href="/coming-soon" class="hover:underline">Skin.Chat</a>
+                            <a href="https://wa.me/6285134892552" target="blank" class="hover:underline">Skin Chat</a>
                         </li>
                     </ul>
                 </div>

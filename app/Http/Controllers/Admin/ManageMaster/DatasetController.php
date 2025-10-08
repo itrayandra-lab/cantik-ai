@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin\ManageMaster;
 
+use CURLFile;
 use App\Models\Dataset;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
@@ -21,7 +22,7 @@ class DatasetController extends Controller
     public function getall(Request $request)
     {
         $query = Dataset::select('id', 'text')
-                ->orderBy('id', 'ASC');
+                ->orderBy('id', 'DESC');
 
         return DataTables::of($query)
             ->addIndexColumn()
@@ -41,54 +42,59 @@ class DatasetController extends Controller
             ->make(true);
     }
 
-   public function create(Request $request)
-{
-    $validator = Validator::make($request->all(), [
-        'file' => 'required|file|mimes:csv,xlsx|max:8048',
-    ]);
+    public function create(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'file' => 'required|file|mimes:csv,xlsx,xls|max:8048',
+        ]);
 
-    if ($validator->fails()) {
-        return response()->json(['error' => $validator->errors()->first()], 422);
-    }
+        if ($validator->fails()) {
+            return response()->json(['error' => $validator->errors()->first()], 422);
+        }
 
-    try {
-        $filePath = $request->file('file')->getRealPath();
-        $fileName = $request->file('file')->getClientOriginalName();
+        try {
+            $uploadedFile = $request->file('file');
+            $filePath = $uploadedFile->getRealPath();
+            $fileName = $uploadedFile->getClientOriginalName();
 
-        // Gunakan format kutip ganda agar aman untuk argumen curl
-        $command = 'curl -X POST ' .
-            '"https://unincarnated-larissa-nonreciprocally.ngrok-free.dev/dataset/upload?api_key=sukher" ' .
-            '-H "accept: application/json" ' .
-            '-H "Content-Type: multipart/form-data" ' .
-            '-F "file=@' . addslashes($filePath) . ';type=application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"';
+            $cfile = new CURLFile(
+                $filePath,
+                'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+                $fileName
+            );
 
-        // Jalankan curl
-        $output = [];
-        $returnVar = 0;
-        exec($command . ' 2>&1', $output, $returnVar);
+            $postData = ['file' => $cfile];
 
-        $responseBody = implode("\n", $output);
-        Log::info('message', [$responseBody, $command]);
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_URL, env('API_URL_CHATBOT ').'/dataset/upload?api_key='. env('API_KEY_CHATBOT'));
+            curl_setopt($ch, CURLOPT_POST, true);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_POSTFIELDS, $postData);
+            curl_setopt($ch, CURLOPT_HTTPHEADER, ['accept: application/json']);
 
-        if ($returnVar === 0) {
-            // Jika responsnya JSON, decode langsung
+            $responseBody = curl_exec($ch);
+            $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+            $curlError = curl_error($ch);
+            curl_close($ch);
+
+            if ($curlError) {
+                return response()->json([
+                    'error' => 'Curl gagal dijalankan: ' . $curlError
+                ], 500);
+            }
+
             $json = json_decode($responseBody, true);
             return response()->json([
                 'message' => 'File berhasil diupload!',
                 'response' => $json ?? $responseBody,
             ], 200);
-        } else {
+
+        } catch (\Exception $e) {
             return response()->json([
-                'error' => 'Curl gagal dijalankan',
-                'command' => $command,
-                'output' => $responseBody
+                'error' => 'Terjadi kesalahan: ' . $e->getMessage()
             ], 500);
         }
-    } catch (\Exception $e) {
-        return response()->json(['error' => 'Terjadi kesalahan: ' . $e->getMessage()], 500);
     }
-}
-
 
 
     public function delete(Request $request)

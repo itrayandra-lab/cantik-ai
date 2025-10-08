@@ -66,7 +66,7 @@ class DatasetController extends Controller
             $postData = ['file' => $cfile];
 
             $ch = curl_init();
-            curl_setopt($ch, CURLOPT_URL, env('API_URL_CHATBOT ').'/dataset/upload?api_key='. env('API_KEY_CHATBOT'));
+            curl_setopt($ch, CURLOPT_URL, env('API_URL_CHATBOT').'/dataset/upload?api_key='. env('API_KEY_CHATBOT'));
             curl_setopt($ch, CURLOPT_POST, true);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             curl_setopt($ch, CURLOPT_POSTFIELDS, $postData);

@@ -31,8 +31,8 @@
                         </p>
                         <div class="mt-6">
                             <a class="inline-flex rounded-lg bg-indigo-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-indigo-600 hover:bg-indigo-700 hover:ring-indigo-700"
-                                href="/coming-soon">
-                                Pelajari Lebih Lanjut
+                                href="https://wa.me/6285134892552">
+                                Cobain Sekarang
                             </a>
                         </div>
                     </div>
@@ -78,7 +78,7 @@
                         </p>
                         <div class="mt-6">
                             <a class="inline-flex rounded-lg bg-indigo-600 px-4 py-1.5 text-base font-semibold leading-7 text-white shadow-sm ring-1 ring-indigo-600 hover:bg-indigo-700 hover:ring-indigo-700"
-                                href="https://wa.me/6285134892552" target="blank">
+                                href="https://cantik-ai-ai-skin-si-2sam.bolt.host/" target="blank">
                                 Cobain Sekarang
                             </a>
                         </div>

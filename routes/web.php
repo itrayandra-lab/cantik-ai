@@ -27,6 +27,7 @@ Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('/', [GuestController::class, 'home'])->name('home');
 Route::get('/chat/coming-soon', [GuestController::class, 'chat'])->name('chat');
 Route::post('/chat', [GuestController::class, 'chatbot'])->name('chatbot');
+Route::post('/chat/reset', [GuestController::class, 'resetChatbotSession'])->name('chatbot.reset');
 Route::get('/coming-soon', [GuestController::class, 'comingsoon'])->name('comingsoon');
 
 # -------------------- ADMIN --------------------

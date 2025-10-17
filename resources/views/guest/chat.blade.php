@@ -39,6 +39,7 @@
             const sendBtn = document.getElementById("sendBtn");
             const resetBtn = document.getElementById("resetChat");
             const apiUrl = "{{ route('chatbot') }}";
+            const resetUrl = "{{ route('chatbot.reset') }}";
             const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute("content");
 
             function addMessage(text, sender = "bot") {
@@ -52,16 +53,15 @@
                     .replace(/\*(.*?)\*/g, "<em>$1</em>")
                     .replace(/__(.*?)__/g, "<u>$1</u>");
 
-                const msgClass = sender === "user" ?
-                    "bg-indigo-600 text-white rounded-2xl px-4 py-3 self-end max-w-[80%]" :
-                    "bg-gray-800 text-gray-100 rounded-2xl px-4 py-3 self-start max-w-[80%]";
+                const msgClass = sender === "user"
+                    ? "bg-indigo-600 text-white rounded-2xl px-4 py-3 self-end max-w-[80%]"
+                    : "bg-gray-800 text-gray-100 rounded-2xl px-4 py-3 self-start max-w-[80%]";
 
                 const align = sender === "user" ? "justify-end" : "justify-start";
 
                 const bubble = document.createElement("div");
                 bubble.className = `flex ${align} animate-fadeIn`;
-                bubble.innerHTML =
-                    `<div class="${msgClass} whitespace-pre-line text-sm break-words">${safeText}</div>`;
+                bubble.innerHTML = `<div class="${msgClass} whitespace-pre-line text-sm break-words">${safeText}</div>`;
 
                 chatBox.appendChild(bubble);
                 chatBox.scrollTop = chatBox.scrollHeight;
@@ -82,9 +82,7 @@
                             "Content-Type": "application/json",
                             "X-CSRF-TOKEN": csrfToken
                         },
-                        body: JSON.stringify({
-                            query
-                        })
+                        body: JSON.stringify({ query })
                     });
 
                     const loaders = Array.from(chatBox.querySelectorAll(".flex"))
@@ -97,7 +95,7 @@
                     }
 
                     const data = await response.json();
-                    addMessage(data.answer || "Tidak ada jawaban dari server.", "bot");
+                    addMessage(data.output || data.answer || "Tidak ada jawaban dari server.", "bot");
 
                 } catch (error) {
                     const loaders = Array.from(chatBox.querySelectorAll(".flex"))
@@ -114,10 +112,29 @@
                 if (e.key === "Enter") sendMessage();
             });
 
-            resetBtn.addEventListener("click", () => {
-                chatBox.innerHTML =
-                    '<div class="text-center text-gray-400 text-sm">Memulai percakapan baru...</div>';
-                setTimeout(showGreeting, 400);
+            resetBtn.addEventListener("click", async () => {
+                chatBox.innerHTML = '<div class="text-center text-gray-400 text-sm">🔄 Mereset sesi chatbot...</div>';
+
+                try {
+                    const response = await fetch(resetUrl, {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json",
+                            "X-CSRF-TOKEN": csrfToken
+                        }
+                    });
+
+                    const data = await response.json();
+
+                    if (data.success) {
+                        chatBox.innerHTML = '<div class="text-center text-gray-400 text-sm">✨ Percakapan baru dimulai.</div>';
+                        setTimeout(showGreeting, 400);
+                    } else {
+                        chatBox.innerHTML = '<div class="text-center text-red-400 text-sm">❌ Gagal mereset sesi.</div>';
+                    }
+                } catch (error) {
+                    chatBox.innerHTML = '<div class="text-center text-red-400 text-sm">⚠️ Gagal menghubungi server.</div>';
+                }
             });
 
             function showGreeting() {
@@ -128,4 +145,5 @@
             showGreeting();
         });
     </script>
+
 @endpush
